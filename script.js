@@ -60,7 +60,7 @@ sr.reveal('.skills__data, .work__img, .contact__input',{interval: 200});
 
 document.addEventListener("DOMContentLoaded", function() {
     document.querySelector("form").addEventListener("submit", function(event) {
-        event.preventDefault(); // Stops page reload
+        // event.preventDefault(); // Stops page reload
 
         const formData = {
             name: document.getElementById("name").value,
