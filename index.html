@@ -271,6 +271,36 @@
     <!--===== SCROLL REVEAL =====-->
     <script src="https://unpkg.com/scrollreveal"></script>
 
+    <script>
+document.querySelector("form").addEventListener("submit", function(event) {
+    event.preventDefault(); // Stops page reload
+
+    const formData = {
+        name: document.getElementById("name").value,
+        email: document.getElementById("email").value,
+        message: document.getElementById("message").value
+    };
+
+    fetch(this.action, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            "Accept": "application/json"
+        },
+        body: JSON.stringify(formData)
+    })
+    .then(response => response.json())
+    .then(data => {
+        alert("Message sent successfully!");
+        this.reset(); // Clear form fields
+    })
+    .catch(error => {
+        alert("Error sending message!");
+    });
+});
+</script>
+
+
     <!--===== MAIN JS =====-->
     <script src="script.js"></script>
 </body>
