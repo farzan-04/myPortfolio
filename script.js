@@ -56,34 +56,3 @@ sr.reveal('.home__social-icon',{ interval: 200});
 sr.reveal('.skills__data, .work__img, .contact__input',{interval: 200}); 
 
 
-/*===== Contact Section Formm =====*/
-
-document.addEventListener("DOMContentLoaded", function() {
-    document.querySelector("form").addEventListener("submit", function(event) {
-        event.preventDefault(); // Stops page reload
-
-        const formData = {
-            name: document.getElementById("name").value,
-            email: document.getElementById("email").value,
-            message: document.getElementById("message").value
-        };
-
-        fetch(this.action, {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-                "Accept": "application/json"
-            },
-            body: JSON.stringify(formData)
-        })
-        .then(response => response.json())
-        .then(data => {
-            alert("Message sent successfully!");
-            this.reset(); // Clear form fields
-        })
-        .catch(error => {
-            alert("Error sending message!");
-        });
-    });
-});
-
