@@ -265,7 +265,7 @@ document.getElementById("contactForm").addEventListener("submit", function(event
         message: document.getElementById("message").value
     };
 
-    fetch("http://127.0.0.1:5000/submit-form", {  // Change to your deployed API URL later
+    fetch("https://myportfolio-backend-flask.onrender.com", {  //deployed API URL
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData)
