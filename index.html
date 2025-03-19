@@ -254,32 +254,7 @@
                 </form>
             </div>
 
-            <div id="responseMessage"></div>
-            <script>
-document.getElementById("contactForm").addEventListener("submit", function(event) {
-    event.preventDefault(); // Stop page reload
-
-    const formData = {
-        name: document.getElementById("name").value,
-        email: document.getElementById("email").value,
-        message: document.getElementById("message").value
-    };
-
-    fetch("https://myportfolio-backend-flask.onrender.com", {  //deployed API URL
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData)
-    })
-    .then(response => response.json())
-    .then(data => {
-        document.getElementById("responseMessage").innerText = data.message;
-        document.getElementById("contactForm").reset(); // Clear form fields
-    })
-    .catch(error => {
-        document.getElementById("responseMessage").innerText = "Error sending message!";
-    });
-});
-</script>
+           
         </section>
     </main>
 
