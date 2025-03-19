@@ -14,22 +14,15 @@ def home():
 
 @app.route("/submit-form", methods=["POST"])
 def submit_form():
-    try:
-        # Try to get form data (from HTML form)
-        if request.form:
-            name = request.form.get("name")
-            email = request.form.get("email")
-            message = request.form.get("message")
+    name = request.form.get("name")  # Get form data
+    email = request.form.get("email")
+    message = request.form.get("message")
 
-        # Try to get JSON data (from JavaScript fetch)
-        elif request.is_json:
-            data = request.get_json()
-            name = data.get("name")
-            email = data.get("email")
-            message = data.get("message")
+    if not name or not email or not message:
+        return jsonify({"error": "Missing form fields"}), 400
 
-        else:
-            return jsonify({"error": "Invalid request format"}), 400
+    return jsonify({"message": "Form received!", "name": name, "email": email, "message": message}), 200
+
 
         # Create email content
         email_msg = EmailMessage()
