@@ -20,6 +20,7 @@ This is my **Personal Portfolio Website** where I showcase my **skills, projects
 
 
 📧 Contact Me
-If you'd like to connect, feel free to reach out:
-📩 Email: mohammedfarzan04@gmail.com
-🔗 LinkedIn: https://www.linkedin.com/in/farzan-mallick-164064356/
+If you'd like to connect, feel free to reach out:  
+📩 [Email](mohammedfarzan04@gmail.com  )
+🔗 **[LinkedIn]( https://www.linkedin.com/in/farzan-mallick-164064356/)**  
+
