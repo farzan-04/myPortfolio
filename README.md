@@ -3,7 +3,7 @@
 This is my **Personal Portfolio Website** where I showcase my **skills, projects, and professional experience** as a **Python Developer**. The website serves as my digital resume and provides an easy way for visitors to learn more about me and get in touch.
 
 ## 🌟 Features
-✅ **Home** – A warm introduction
+✅ **Home** – A warm introduction  
 ✅ **About** – Professional background and expertise  
 ✅ **Skills** – A structured list of technical skills and tools  
 ✅ **Work** – Displays demo images of ongoing projects  
